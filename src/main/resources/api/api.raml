@@ -1,0 +1,23 @@
+#%RAML 1.0
+title: Sample API
+baseUri: http://localhost:8081/api
+
+/result:
+  get:
+    
+    description: "The GET request"
+    queryParameters:
+      name:
+        description: "The name of the person"
+        required: true
+        type: string
+        example: "Lilly"
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "name" : "Naveed"
+              }
+  
